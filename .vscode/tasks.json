@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "group": "none",
+      "label": "Django / Make Migrations",
+      "type": "shell",
+      "command": "poetry run python manage.py makemigrations",
+      "problemMatcher": []
+    },
+    {
+      "group": "none",
+      "label": "Django / Migrate",
+      "type": "shell",
+      "command": "poetry run python manage.py migrate",
+      "problemMatcher": []
+    }
+  ]
+}

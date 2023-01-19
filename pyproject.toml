@@ -1,0 +1,48 @@
+[build-system]
+requires = ["poetry-core", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry]
+name = "exemplo-projeto-django"
+version = "0.0.0"
+description = "Exemplo de projeto Django"
+authors = ["Eduardo Klosowski <eduardo_klosowski@yahoo.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/eduardoklosowski/exemplo-projeto-django"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "~4.2a1"
+psycopg = "~3.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "~0.0.224"
+mypy = ">=0.980,<1"
+django-stubs = {version = "~1.13.1", extras = ["compatible-mypy"]}
+
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+select = ["F", "E", "W", "I", "UP", "N", "S", "B", "C4", "T10", "T20", "PT", "Q", "RET", "SIM", "COM", "RUF"]
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.mypy]
+warn_unused_configs = true
+show_column_numbers = true
+show_error_codes = true
+sqlite_cache = true
+strict = true
+plugins = [
+  "mypy_django_plugin.main",
+]
+
+[tool.django-stubs]
+django_settings_module = "project.settings"

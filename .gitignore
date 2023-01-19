@@ -1,0 +1,11 @@
+# Python
+*.py[cod]
+__pycache__
+/dist
+
+# Dev tools
+/.ruff_cache
+/.mypy_cache
+
+# Env
+/db.sqlite3
