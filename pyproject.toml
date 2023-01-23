@@ -23,7 +23,7 @@ psycopg = "~3.1"
 [tool.poetry.group.dev.dependencies]
 ruff = "~0.0.224"
 mypy = ">=0.980,<1"
-django-stubs = {version = "~1.13.1", extras = ["compatible-mypy"]}
+django-stubs = {version = "~1.13.2", extras = ["compatible-mypy"]}
 
 [tool.ruff]
 target-version = "py38"
