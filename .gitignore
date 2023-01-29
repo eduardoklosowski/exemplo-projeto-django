@@ -9,3 +9,10 @@ __pycache__
 
 # Env
 /db.sqlite3
+
+# Editors
+/.vscode/*
+!/.vscode/*.example
+
+# Others
+.DS_Store

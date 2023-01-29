@@ -1,18 +1,18 @@
 {
-	"name": "ExemploProjetoDjango",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "dev",
-	"postCreateCommand": "poetry install",
-	"forwardPorts": [8000, 5432],
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "name": "ExemploProjetoDjango",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "postCreateCommand": "./scripts/configure-env.sh",
+  "forwardPorts": [8000, 5432],
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "customizations": {
-		"vscode": {
-			"extensions": [
-				"EditorConfig.EditorConfig",
-				"bungcip.better-toml",
-				"ms-python.python",
-				"charliermarsh.ruff"
-			]
-		}
-	}
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "bungcip.better-toml",
+        "ms-python.python",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
 }
